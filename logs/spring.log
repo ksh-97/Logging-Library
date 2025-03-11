@@ -67,3 +67,96 @@ java.lang.RuntimeException: Test Exception
 
 2025-03-11T10:34:38.337+05:30  INFO 25376 --- [loggingLibrary] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
 2025-03-11T10:34:38.342+05:30  INFO 25376 --- [loggingLibrary] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-03-11T10:34:42.339+05:30  INFO 6624 --- [loggingLibrary] [main] c.l.l.LoggingLibraryApplication          : Starting LoggingLibraryApplication using Java 21.0.5 with PID 6624 (D:\Demo Applications\loggingLibrary\target\classes started by kshitij in D:\Demo Applications\loggingLibrary)
+2025-03-11T10:34:42.341+05:30  INFO 6624 --- [loggingLibrary] [main] c.l.l.LoggingLibraryApplication          : No active profile set, falling back to 1 default profile: "default"
+2025-03-11T10:34:43.276+05:30  INFO 6624 --- [loggingLibrary] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-03-11T10:34:43.295+05:30  INFO 6624 --- [loggingLibrary] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-11T10:34:43.296+05:30  INFO 6624 --- [loggingLibrary] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-03-11T10:34:43.344+05:30  INFO 6624 --- [loggingLibrary] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-11T10:34:43.344+05:30  INFO 6624 --- [loggingLibrary] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 956 ms
+2025-03-11T10:34:43.746+05:30  INFO 6624 --- [loggingLibrary] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-03-11T10:34:43.755+05:30  INFO 6624 --- [loggingLibrary] [main] c.l.l.LoggingLibraryApplication          : Started LoggingLibraryApplication in 1.88 seconds (process running for 2.61)
+2025-03-11T10:34:51.101+05:30  INFO 6624 --- [loggingLibrary] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-11T10:34:51.102+05:30  INFO 6624 --- [loggingLibrary] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-03-11T10:34:51.103+05:30  INFO 6624 --- [loggingLibrary] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-03-11T10:34:51.138+05:30  INFO 6624 --- [loggingLibrary] [http-nio-8080-exec-1] c.l.loggingLibrary.TestController        : Info log from API
+2025-03-11T10:34:51.139+05:30  WARN 6624 --- [loggingLibrary] [http-nio-8080-exec-1] c.l.loggingLibrary.TestController        : Warning log
+2025-03-11T10:34:51.139+05:30 ERROR 6624 --- [loggingLibrary] [http-nio-8080-exec-1] c.l.loggingLibrary.TestController        : Error log
+
+java.lang.RuntimeException: Test Exception
+	at com.libraray.loggingLibrary.TestController.testLogging(TestController.java:22) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:257) ~[spring-web-6.2.3.jar:6.2.3]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:190) ~[spring-web-6.2.3.jar:6.2.3]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.2.3.jar:6.2.3]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986) ~[spring-webmvc-6.2.3.jar:6.2.3]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891) ~[spring-webmvc-6.2.3.jar:6.2.3]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.2.3.jar:6.2.3]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1088) ~[spring-webmvc-6.2.3.jar:6.2.3]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:978) ~[spring-webmvc-6.2.3.jar:6.2.3]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.3.jar:6.2.3]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.2.3.jar:6.2.3]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.36.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.3.jar:6.2.3]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.36.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.36.jar:10.1.36]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.3.jar:6.2.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.3.jar:6.2.3]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.3.jar:6.2.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.3.jar:6.2.3]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.3.jar:6.2.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.3.jar:6.2.3]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+2025-03-11T10:50:57.467+05:30  INFO 18700 --- [loggingLibrary] [main] c.l.l.LoggingLibraryApplicationTests     : Starting LoggingLibraryApplicationTests using Java 21.0.5 with PID 18700 (started by kshitij in D:\Demo Applications\loggingLibrary)
+2025-03-11T10:50:57.470+05:30  INFO 18700 --- [loggingLibrary] [main] c.l.l.LoggingLibraryApplicationTests     : No active profile set, falling back to 1 default profile: "default"
+2025-03-11T10:50:59.658+05:30  INFO 18700 --- [loggingLibrary] [main] c.l.l.LoggingLibraryApplicationTests     : Started LoggingLibraryApplicationTests in 2.767 seconds (process running for 4.554)
+2025-03-11T10:54:03.662+05:30  INFO 20600 --- [loggingLibrary] [main] c.l.l.LoggingLibraryApplicationTests     : Starting LoggingLibraryApplicationTests using Java 21.0.5 with PID 20600 (started by kshitij in D:\Demo Applications\loggingLibrary)
+2025-03-11T10:54:03.667+05:30  INFO 20600 --- [loggingLibrary] [main] c.l.l.LoggingLibraryApplicationTests     : No active profile set, falling back to 1 default profile: "default"
+2025-03-11T10:54:05.981+05:30  INFO 20600 --- [loggingLibrary] [main] c.l.l.LoggingLibraryApplicationTests     : Started LoggingLibraryApplicationTests in 2.827 seconds (process running for 4.165)
+2025-03-11T10:54:44.857+05:30  INFO 6624 --- [loggingLibrary] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-03-11T10:54:44.857+05:30  INFO 6624 --- [loggingLibrary] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-03-11T11:16:15.202+05:30  INFO 8200 --- [loggingLibrary] [main] c.l.l.LoggingLibraryApplicationTests     : Starting LoggingLibraryApplicationTests using Java 21.0.5 with PID 8200 (started by kshitij in D:\Demo Applications\loggingLibrary)
+2025-03-11T11:16:15.205+05:30  INFO 8200 --- [loggingLibrary] [main] c.l.l.LoggingLibraryApplicationTests     : No active profile set, falling back to 1 default profile: "default"
+2025-03-11T11:16:17.488+05:30  INFO 8200 --- [loggingLibrary] [main] c.l.l.LoggingLibraryApplicationTests     : Started LoggingLibraryApplicationTests in 2.664 seconds (process running for 3.816)
+2025-03-11T11:16:32.517+05:30  INFO 24460 --- [loggingLibrary] [main] c.l.l.LoggingLibraryApplicationTests     : Starting LoggingLibraryApplicationTests using Java 21.0.5 with PID 24460 (started by kshitij in D:\Demo Applications\loggingLibrary)
+2025-03-11T11:16:32.519+05:30  INFO 24460 --- [loggingLibrary] [main] c.l.l.LoggingLibraryApplicationTests     : No active profile set, falling back to 1 default profile: "default"
+2025-03-11T11:16:34.126+05:30  INFO 24460 --- [loggingLibrary] [main] c.l.l.LoggingLibraryApplicationTests     : Started LoggingLibraryApplicationTests in 2.003 seconds (process running for 3.306)
+2025-03-11T11:17:03.158+05:30  INFO 22848 --- [loggingLibrary] [main] c.l.l.LoggingLibraryApplicationTests     : Starting LoggingLibraryApplicationTests using Java 21.0.5 with PID 22848 (started by kshitij in D:\Demo Applications\loggingLibrary)
+2025-03-11T11:17:03.161+05:30  INFO 22848 --- [loggingLibrary] [main] c.l.l.LoggingLibraryApplicationTests     : No active profile set, falling back to 1 default profile: "default"
+2025-03-11T11:17:05.260+05:30  INFO 22848 --- [loggingLibrary] [main] c.l.l.LoggingLibraryApplicationTests     : Started LoggingLibraryApplicationTests in 2.448 seconds (process running for 3.66)
+2025-03-11T16:00:15.449+05:30  INFO 10632 --- [loggingLibrary] [main] c.l.l.LoggingLibraryApplicationTests     : Starting LoggingLibraryApplicationTests using Java 21.0.5 with PID 10632 (started by kshitij in D:\Demo Applications\loggingLibrary)
+2025-03-11T16:00:15.449+05:30  INFO 10632 --- [loggingLibrary] [main] c.l.l.LoggingLibraryApplicationTests     : No active profile set, falling back to 1 default profile: "default"
+2025-03-11T16:00:17.484+05:30  INFO 10632 --- [loggingLibrary] [main] c.l.l.LoggingLibraryApplicationTests     : Started LoggingLibraryApplicationTests in 2.485 seconds (process running for 4.048)
+2025-03-11T16:01:34.377+05:30  INFO 23500 --- [loggingLibrary] [main] c.l.l.LoggingLibraryApplicationTests     : Starting LoggingLibraryApplicationTests using Java 21.0.5 with PID 23500 (started by kshitij in D:\Demo Applications\loggingLibrary)
+2025-03-11T16:01:34.380+05:30  INFO 23500 --- [loggingLibrary] [main] c.l.l.LoggingLibraryApplicationTests     : No active profile set, falling back to 1 default profile: "default"
+2025-03-11T16:01:35.931+05:30  INFO 23500 --- [loggingLibrary] [main] c.l.l.LoggingLibraryApplicationTests     : Started LoggingLibraryApplicationTests in 1.901 seconds (process running for 3.058)
+2025-03-11T16:08:55.321+05:30  INFO 11092 --- [loggingLibrary] [main] c.l.l.LoggingLibraryApplicationTests     : Starting LoggingLibraryApplicationTests using Java 21.0.5 with PID 11092 (started by kshitij in D:\Demo Applications\loggingLibrary)
+2025-03-11T16:08:55.323+05:30  INFO 11092 --- [loggingLibrary] [main] c.l.l.LoggingLibraryApplicationTests     : No active profile set, falling back to 1 default profile: "default"
+2025-03-11T16:08:56.863+05:30  INFO 11092 --- [loggingLibrary] [main] c.l.l.LoggingLibraryApplicationTests     : Started LoggingLibraryApplicationTests in 1.904 seconds (process running for 3.032)
